@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Единый портал спортивных дисциплин — твоя территория спорта</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <div class="logo">ic</div>
+        <div>ЕПСД</div>
+      </div>
+      <form class="search" id="global-search">
+        <input
+          id="search"
+          aria-label="Поиск спортивной дисциплины"
+          placeholder="Найти свой вид спорта…"
+          autocomplete="off"
+        />
+      </form>
+      <div class="header-actions">
+        <button id="theme" aria-label="Переключить тему" title="Переключить тему">◐</button
+        ><button id="account" class="primary account-name">Войти →</button>
+      </div>
+    </header>
+    <div class="shell">
+      <aside>
+        <div>
+          <p class="side-label">Твоя территория спорта</p>
+          <nav id="nav"></nav>
+        </div>
+        <div class="extra-nav">
+          <p class="side-label">В фокусе</p>
+          <nav>
+            <button data-sport="Футбол">⚽ Футбол</button
+            ><button data-sport="Хоккей">🏒 Хоккей</button
+            ><button data-sport="Киокушин">🥋 Киокушин</button>
+          </nav>
+        </div>
+        <div class="side-note">
+          <strong>Спорт объединяет.</strong>
+          <p>Находи дисциплины, планируй тренировки и двигайся к своему результату.</p>
+        </div>
+      </aside>
+      <main id="main" tabindex="-1"></main>
+    </div>
+    <dialog id="auth">
+      <div class="modal-head">
+        <h2 id="auth-title">Добро пожаловать</h2>
+        <button class="close" data-close aria-label="Закрыть">×</button>
+      </div>
+      <div class="tabs">
+        <button id="login-tab" class="active">Вход</button
+        ><button id="register-tab">Регистрация</button>
+      </div>
+      <div id="auth-body"></div>
+    </dialog>
+    <dialog id="info">
+      <div class="modal-head">
+        <h2 id="info-title"></h2>
+        <button class="close" data-close aria-label="Закрыть">×</button>
+      </div>
+      <div id="info-body"></div>
+    </dialog>
+    <div id="toast" class="toast hidden" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
